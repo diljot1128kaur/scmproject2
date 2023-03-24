@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+
+// Define structure for customer data
+struct customer {
+    int id;
+    char name[50];
+    char address[100];
+    char phone[11];
+};
+
+// Define global variables
+int num_customers = 0;
+struct customer customers[100];
+
+// Function to add a new customer
+
+// Main function
+int main() {
+    int choice;
+    do {
+        printf("\n\n");
+        printf("1. Add customer\n");
+        printf("2. Display customers\n");
+        printf("3. Remove customer\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch(choice) {
+            case 1:
+                add_customer();
+                break;
+            case 2:
+                display_customers();
+                break;
+            case 3:
+                remove_customer();
+                break;
+            case 4:
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice.\n");
+        }
+    } while (choice != 4);
+    return 0;
+    
+    
+    
