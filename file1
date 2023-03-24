@@ -13,7 +13,7 @@ struct customer {
 int num_customers = 0;
 struct customer customers[100];
 
-// Function to add a new customer
+// Function to add new customer
 void add_customer() {
     struct customer new_customer;
     printf("Enter customer name: ");
